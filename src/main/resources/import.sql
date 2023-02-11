@@ -1,0 +1,2 @@
+INSERT INTO t_users (id, username, password, email, company) VALUES (1, 'said', 'said', 'said', 'said');
+INSERT INTO t_users (id, username, password, email, company) VALUES (2, 'otman', 'otman', 'otman', 'otman');
