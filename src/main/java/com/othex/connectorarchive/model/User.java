@@ -6,6 +6,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
 @Data
@@ -26,6 +27,7 @@ public class User {
 	@Column(name = "password")
 	private String password;
 
+	@NotBlank(message = "rak nsiti l company aweld l3abd")
 	@Column(name = "company")
 	private String company;
 
