@@ -1,47 +1,52 @@
 package com.othex.connectorarchive.model;
 
-import java.sql.Date;
+import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "T_connector")
+@Table(name = "T_CONNECTORS")
 public class Connector {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "connector_id")
 	private long id;
 
-	@Column(name = "Part_Number")
+	@Column(name = "con_part_number")
 	private String partNumber;
 	
-	@Column(name = "Supplier")
+	@Column(name = "con_supplier")
 	private String supplier;
 	
-	@Column(name = "Con_Color")
-	private String con_Color;
+	@Column(name = "con_color")
+	private String color;
 	
-	@Column(name = "Con_Image")
-	private String con_Image;
+	@Column(name = "con_image")
+	private String image;
 	
-	@Column(name = "Cavities_Number")
-	private String cavities_Number;
+	@Column(name = "con_cavities_number")
+	private String cavitiesNumber;
 	
-	@Column(name = "Con_Description")
-	private String con_Description;
+	@Column(name = "con_description")
+	private String description;
 	
-	@Column(name = "Creation_date")
-	private Date creation_date;
+	@Column(name = "con_creation_date")
+	private String creationDate;
 	
-	@Column(name = "Update_date")
-	private Date update_date;
+	@Column(name = "con_update_date")
+	private String updateDate;
 
+	@OneToMany(mappedBy="connector", fetch = FetchType.EAGER)
+	private List<Detection> detections;
+	
 }
