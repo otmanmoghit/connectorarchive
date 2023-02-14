@@ -27,7 +27,7 @@ public class User {
 	@Column(name = "password")
 	private String password;
 
-	@NotBlank(message = "rak nsiti l company aweld l3abd")
+	@NotBlank(message = "Company shouldn't be empty")
 	@Column(name = "company")
 	private String company;
 

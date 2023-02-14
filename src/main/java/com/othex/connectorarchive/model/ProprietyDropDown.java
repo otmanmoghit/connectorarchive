@@ -6,20 +6,22 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "T_PDP")
+@Table(name = "T_Connector")
 public class ProprietyDropDown {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 
-	@Column(name = "pdp_value")
-	private String pdpValue;
+	@Column(name = "value")
+	private String value;
 
-	@Column(name = "pdp_type")
-	private String pdpType;
+	@Column(name = "type")
+	private String type;
 }
+
