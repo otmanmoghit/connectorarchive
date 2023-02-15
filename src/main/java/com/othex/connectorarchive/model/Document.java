@@ -15,21 +15,15 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "T_DETECTIONS")
-public class Detection {
+@Table(name = "T_DOCUMENTS")
+public class Document {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 
-	@Column(name = "dt_name")
-	private String name;
-
-	@Column(name = "dt_color")
-	private String color;
-
-	@Column(name = "dt_description")
-	private String description;
+	@Column(name = "doc_file_path")
+	private String filePath;
 
 	@JsonIgnore
 	@ManyToOne(cascade = CascadeType.ALL)

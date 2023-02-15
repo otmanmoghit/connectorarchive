@@ -49,4 +49,9 @@ public class Connector {
 	@OneToMany(mappedBy="connector", fetch = FetchType.EAGER)
 	private List<Detection> detections;
 	
+	@OneToMany(mappedBy="connector", fetch = FetchType.EAGER)
+	private List<Document> documents;
+
+	@OneToMany(mappedBy="connector", fetch = FetchType.EAGER)
+	private List<Project> projects;
 }
