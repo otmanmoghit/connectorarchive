@@ -58,6 +58,7 @@ public class ConnectorController {
         connector.setSupplier(connectorDetails.getSupplier());
         connector.setColor(connectorDetails.getColor());
         connector.setImage(connectorDetails.getImage());
+        connector.setThumbnail(connectorDetails.getThumbnail());
         connector.setCavitiesNumber(connectorDetails.getCavitiesNumber());
         connector.setDescription(connectorDetails.getDescription());
         connector.setCreationDate(connectorDetails.getCreationDate());

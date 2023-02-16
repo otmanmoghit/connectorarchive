@@ -33,6 +33,9 @@ public class Connector {
 	
 	@Column(name = "con_image")
 	private String image;
+		
+	@Column(name = "con_thumbnail")
+	private String thumbnail;
 	
 	@Column(name = "con_cavities_number")
 	private String cavitiesNumber;
